@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabezera reponsibe</title>
+<style>
+    body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+h1{
+    font-size: 2rem;
+    line-height: 1.3rem;
+}
+p{
+    margin-bottom: 1.6em;
+}
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+#imagen{
+width: 38px;
+}
+.header{
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    /*aplicando parametros */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+.log-nav-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.menu-icon{
+    display: none;
+}
+.navegation ul{
+    margin: 0;
+    padding:0;
+    list-style:none;
+}
+/*Para mostrar uno al lado de otro en bloque los enlaces
+*/
+.navegation ul li{
+    display: inline-block;
+}
+.navegation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+/*añadiendo un clase hover*/
+.navegation ul li a:hover{
+    background:#4a4a4a;
+}
+.logo{
+    letter-spacing: 15px;
+    font-size: 1.2em;
+}
+/*añadir espacio al contenido*/
+.main{
+    padding: 12rem;
+}
+.footer{
+    background:#f2f2f2;
+    padding:4rem 0;
+    text-align:center;
+margin-top: 6rem;
+}
+
+@media only screen and (max-width:767px){
+    .menu-icon{
+        display:block;
+        cursor:pointer;
+        padding: 0.5rem 1rem;
+    }
+    .navegation{
+        width: 100%;
+        margin-top: 1em;
+    }
+    .navegation ul{
+        display: none;
+    }
+    .navegation ul.show{
+        display: block;
+    }
+    .navegation ul li{
+        display: block;
+    }
+    .navegation ul li a{
+        text-align: center;
+        display: block;
+        padding: 0.5rem 0;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    /*añadiendo un clase hover*/
+    .navegation ul li a:hover{
+        background:#4a4a4a;
+    }
+}
+</style>
+</head>
+<body>
+<header class="header">
+    <div class="container log-nav-container">
+        <a href="#" class="logo"><img id="imagen" src="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png" alt=""></a>
+        <span class="menu-icon">ver menu</span>
+        <nav class="navegation">
+            <ul >
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">servicios</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <h1>hola</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In amet quaerat rem, iure nulla dolorum, molestiae magnam architecto, sequi laudantium illum? Quidem molestias quam eaque aliquid laborum expedita inventore cupiditate?</p>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+<p>pagina diseñada por @inex</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    jQuery('document').ready(function($){
+
+var menuBtn = $('.menu-icon'),
+    menu = $('.navegation ul ');
+    menuBtn.click(function(){
+        if(menu.hasClass('show')){
+        menu.removeClass('show');
+        }else{
+            menu.addClass('show');
+        }
+    });
+});
+</script>
+</body>
+</html>
